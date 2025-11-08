@@ -1,5 +1,4 @@
 import random
-import pytest
 from src.heap import heap_sort
 from src.bubble import bubble
 from src.merge import merge
