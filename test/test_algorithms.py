@@ -43,20 +43,20 @@ def test_negative():
 def test_heap_bubble():
     for _ in range(20):
         array = [random.randint(-50, 50) for _ in range(10)]
-        assert heap_sort(array) == bubble(array)
+        assert heap_sort(array.copy()) == bubble(array.copy())
 
 def test_heap_merge():
     for _ in range(20):
         array = [random.randint(-50, 50) for _ in range(10)]
-        assert heap_sort(array) == merge(array)
+        assert heap_sort(array.copy()) == merge(array.copy())
 
 def test_heap_quick():
     for _ in range(20):
         array = [random.randint(-50, 50) for _ in range(10)]
-        assert heap_sort(array) == quick(array)
+        assert heap_sort(array.copy()) == quick(array.copy())
 
 def test_all_equal():
-    assert heap_sort([1, 2, 3]) == bubble([1, 2, 3]) == merge([1, 2, 3]) == quick([1, 2, 3])
-    assert heap_sort([3, 2, 1]) == bubble([3, 2, 1]) == merge([3, 2, 1]) == quick([3, 2, 1])
-    assert heap_sort([1, 1, 1]) == bubble([1, 1, 1]) == merge([1, 1, 1]) == quick([1, 1, 1])
-    assert heap_sort([5, -1, 0]) == bubble([5, -1, 0]) == merge([5, -1, 0]) == quick([5, -1, 0])
+    assert heap_sort([1, 2, 3].copy()) == bubble([1, 2, 3].copy()) == merge([1, 2, 3].copy()) == quick([1, 2, 3].copy())
+    assert heap_sort([3, 2, 1].copy()) == bubble([3, 2, 1].copy()) == merge([3, 2, 1].copy()) == quick([3, 2, 1].copy())
+    assert heap_sort([1, 1, 1].copy()) == bubble([1, 1, 1].copy()) == merge([1, 1, 1].copy()) == quick([1, 1, 1].copy())
+    assert heap_sort([5, -1, 0].copy()) == bubble([5, -1, 0].copy()) == merge([5, -1, 0].copy()) == quick([5, -1, 0].copy())
